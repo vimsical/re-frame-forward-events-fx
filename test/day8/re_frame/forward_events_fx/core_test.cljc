@@ -1,8 +1,10 @@
 (ns day8.re-frame.forward-events-fx.core-test
-  (:require [cljs.test :refer-macros [is deftest async]]
-            [day8.re-frame.forward-events-fx]
-            [re-frame.core :as re-frame]
-            [re-frame.router]))
+  (:require
+   #?(:cljs [cljs.test :refer-macros [is deftest async]]
+      :clj  [clojure.test :refer [is deftest]])
+   [day8.re-frame.forward-events-fx]
+   [re-frame.core :as re-frame]
+   [re-frame.router]))
 
 (deftest test1
   (let [dispatched-events  (atom #{})
